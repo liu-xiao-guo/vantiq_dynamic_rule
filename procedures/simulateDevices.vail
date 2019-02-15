@@ -1,0 +1,15 @@
+PROCEDURE simulateDevices(event)
+
+var obj1 = {}
+obj1.id = "a12345"
+obj1.data = random(98, 102)
+PUBLISH obj1 TO TOPIC "/device/reading"
+
+
+var obj2 = {}
+obj2.id = "b23456"
+obj2.data = random(198, 202)
+PUBLISH obj2 TO TOPIC "/device/reading"
+
+
+

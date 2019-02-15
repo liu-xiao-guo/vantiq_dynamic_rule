@@ -1,0 +1,342 @@
+{
+  "links" : [ {
+    "source" : "procedure/simulateDevices",
+    "target" : "topic//device/reading"
+  }, {
+    "source" : "scheduledevent/simulateDeviceData",
+    "target" : "topic//xiaoguo/simulatedevice"
+  }, {
+    "source" : "topic//xiaoguo/simulatedevice",
+    "target" : "rule/onSimulateDevice"
+  }, {
+    "source" : "client/test_client",
+    "target" : "topic//my/response/topic"
+  }, {
+    "source" : "topic//xiaoguo/devicedetailevents",
+    "target" : "client/test_client"
+  }, {
+    "source" : "rule/onSimulateDevice",
+    "target" : "procedure/simulateDevices"
+  } ],
+  "name" : "dynamic_rule",
+  "options" : {
+    "description" : "",
+    "dockCollapsed" : false,
+    "dockSort" : 1,
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "showGrid" : true,
+    "tileColumns" : 2,
+    "tileRows" : 2,
+    "v" : 2
+  },
+  "resources" : [ {
+    "label" : "/device/reading",
+    "name" : "/device/reading",
+    "node" : {
+      "x" : 269.20981693685053,
+      "y" : 101.21700172023037
+    },
+    "type" : 10
+  }, {
+    "label" : "/my/response/topic",
+    "name" : "/my/response/topic",
+    "node" : {
+      "x" : 571.9712898945555,
+      "y" : 344.03378876109355
+    },
+    "type" : 10
+  }, {
+    "label" : "/xiaoguo/devicedetailevents",
+    "name" : "/xiaoguo/devicedetailevents",
+    "node" : {
+      "x" : 601.8148001716042,
+      "y" : 230.64682503169342
+    },
+    "type" : 10
+  }, {
+    "label" : "/xiaoguo/simulatedevice",
+    "name" : "/xiaoguo/simulatedevice",
+    "node" : {
+      "x" : 494.564594288308,
+      "y" : 58.48211048129804
+    },
+    "type" : 10
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "format" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "create_dynamic_Rule",
+    "name" : "create_dynamic_Rule",
+    "node" : {
+      "x" : 623.1125863477378,
+      "y" : 140.65236763201543
+    },
+    "timestamp" : "2019-02-15T06:57:45.920Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "simulateDevices" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "in" ],
+      "topics" : [ "/xiaoguo/simulatedevice" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "onSimulateDevice",
+    "name" : "onSimulateDevice",
+    "node" : {
+      "x" : 491.7439395622133,
+      "y" : 99.59702022670058
+    },
+    "timestamp" : "2019-02-15T07:32:51.393Z",
+    "type" : 2
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "remove_dynamic_rule",
+    "name" : "remove_dynamic_rule",
+    "node" : {
+      "x" : 347.1422429929113,
+      "y" : 220.02754403889594
+    },
+    "timestamp" : "2019-02-15T07:01:20.236Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/xiaoguo/simulatedevice" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "simulateDeviceData",
+    "name" : "simulateDeviceData",
+    "node" : {
+      "x" : 487.04608328016724,
+      "y" : 6.274206943559534
+    },
+    "timestamp" : "2019-02-15T07:03:16.755Z",
+    "type" : 17
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "random" ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/device/reading" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "simulateDevices",
+    "name" : "simulateDevices",
+    "node" : {
+      "x" : 265.2756773566174,
+      "y" : 161.4981454688808
+    },
+    "timestamp" : "2019-02-15T07:28:14.686Z",
+    "type" : 3
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out", "in" ],
+      "topics" : [ "/my/response/topic", "/xiaoguo/devicedetailevents" ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "test_client",
+    "name" : "test_client",
+    "node" : {
+      "x" : 584.6900987010434,
+      "y" : 279.1777355579314
+    },
+    "timestamp" : "2019-02-15T08:20:25.853Z",
+    "type" : 15
+  } ],
+  "tools" : [ {
+    "isPinned" : true,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "c" : 1,
+      "lastUsed" : 1550218902515,
+      "r" : 0
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 1.0717734625362931,
+        "translate" : [ -132.97815655581996, 26.233552239812212 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "onSimulateDevice",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1550215967331,
+      "r" : -1
+    },
+    "resourceKey" : "rule/onSimulateDevice",
+    "type" : 3
+  }, {
+    "isPinned" : true,
+    "name" : "test_client",
+    "pane" : {
+      "c" : 0,
+      "lastUsed" : 1550218980103,
+      "r" : 1
+    },
+    "resourceKey" : "client/test_client",
+    "toolOptions" : {
+      "isRunning" : false
+    },
+    "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "/xiaoguo/devicedetailevents",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1550215584400,
+      "r" : -1
+    },
+    "resourceKey" : "topic//xiaoguo/devicedetailevents",
+    "type" : 8
+  }, {
+    "isPinned" : false,
+    "name" : "/xiaoguo/devicedetailevents",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1550215578913,
+      "r" : -1
+    },
+    "resourceKey" : "topic//xiaoguo/devicedetailevents",
+    "type" : 11
+  }, {
+    "isPinned" : false,
+    "name" : "/xiaoguo/simulatedevice",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1550215634627,
+      "r" : -1
+    },
+    "resourceKey" : "topic//xiaoguo/simulatedevice",
+    "type" : 8
+  }, {
+    "isPinned" : false,
+    "name" : "/xiaoguo/simulatedevice",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1550215634691,
+      "r" : -1
+    },
+    "resourceKey" : "topic//xiaoguo/simulatedevice",
+    "type" : 11
+  }, {
+    "isPinned" : false,
+    "name" : "simulateDevices",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1550215917915,
+      "r" : -1
+    },
+    "resourceKey" : "procedure/simulateDevices",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "/device/reading",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1550216779476,
+      "r" : -1
+    },
+    "resourceKey" : "topic//device/reading",
+    "type" : 11
+  }, {
+    "isPinned" : false,
+    "name" : "remove_dynamic_rule",
+    "pane" : {
+      "c" : 0,
+      "lastUsed" : 1550218957906,
+      "r" : 0
+    },
+    "resourceKey" : "procedure/remove_dynamic_rule",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "create_dynamic_Rule",
+    "pane" : {
+      "c" : 1,
+      "lastUsed" : 1550218884918,
+      "r" : 1
+    },
+    "resourceKey" : "procedure/create_dynamic_Rule",
+    "type" : 24
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "cmeditorrule/onSimulateDevice", "client/test_client", "subtopiceditor//xiaoguo/devicedetailevents", "dataviewer//xiaoguo/devicedetailevents", "subtopiceditor//xiaoguo/simulatedevice", "dataviewer//xiaoguo/simulatedevice", "cmeditorprocedure/simulateDevices", "autopsylist/Autopsies (newest first) @ 3:29:35 PM", "dataviewer//device/reading", "cmeditorprocedure/remove_dynamic_rule", "cmeditorprocedure/create_dynamic_Rule" ]
+  } ]
+}

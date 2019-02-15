@@ -1,0 +1,13 @@
+PROCEDURE create_dynamic_Rule(deviceid String)
+
+var myrule = format("
+
+RULE sendToClient
+
+WHEN PUBLISH OCCURS ON \"/device/reading\" AS obj WHERE obj.newValue.id == \"{0}\"
+
+PUBLISH obj.newValue TO TOPIC \"/xiaoguo/devicedetailevents\"
+
+", deviceid)
+
+CREATE RULE(myrule)

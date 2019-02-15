@@ -1,0 +1,1 @@
+This small Vantiq application shows you how to dynamically create a rule and remove it. This is useful when an application wants to activate certain function in some cases.

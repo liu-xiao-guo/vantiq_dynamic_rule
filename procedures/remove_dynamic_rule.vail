@@ -1,0 +1,8 @@
+PROCEDURE remove_dynamic_rule()
+
+try{
+	var rulename = "sendToClient"
+	DROP RULE (rulename)
+} catch (notfound){
+    log.info("No rule sendToClient found for delete")
+}

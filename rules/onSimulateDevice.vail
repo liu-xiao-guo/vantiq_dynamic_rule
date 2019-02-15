@@ -1,0 +1,4 @@
+RULE onSimulateDevice
+WHEN PUBLISH OCCURS ON "/xiaoguo/simulatedevice" 
+
+simulateDevices()

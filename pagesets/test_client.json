@@ -1,0 +1,305 @@
+{
+  "controllers" : {
+    "client" : { },
+    "dataStream" : {
+      "ce_number1" : {
+        "onDataArrived" : "console.log(data);"
+      },
+      "ce_number2" : { },
+      "pe_eventstream" : {
+        "onDataArrived" : "console.log(data);\n\nvar number = \"\" + data.data;\n\nif (data.id === \"a12345\") {\n\tclient.sendClientEvent(\"ce_number1\", [{\"number\": number}]);\n} else if (data.id === \"b23456\") {\n\tclient.sendClientEvent(\"ce_number2\", [{\"number\": number}]);    \n}\n"
+      }
+    },
+    "page" : {
+      "Start" : {
+        "widgets" : { }
+      }
+    }
+  },
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : {
+          "dataNumber" : {
+            "defaultLabel" : "number",
+            "type" : "TypedObject",
+            "typedObject" : {
+              "properties" : {
+                "number" : {
+                  "defaultLabel" : "number",
+                  "type" : "Integer"
+                }
+              }
+            }
+          }
+        }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "pe_eventstream",
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "topic" : "/xiaoguo/devicedetailevents",
+      "type" : 2,
+      "updateInterval" : 60,
+      "uuid" : "b3d202df-b7df-4166-983b-d1f19707983f",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "dataObjectName" : "client.data.dataNumber",
+      "dataTypeList" : [ ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "ce_number2",
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "99ba53c7-7439-4867-802f-8f011687a8f8",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "dataObjectName" : "client.data.dataNumber",
+      "dataTypeList" : [ ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "ce_number1",
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 5,
+      "updateInterval" : 60,
+      "uuid" : "b2c7e870-fc9a-4a4c-8023-4fedf5eb2947",
+      "v" : 1
+    } ]
+  },
+  "name" : "test_client",
+  "options" : {
+    "badgeCount" : 0,
+    "description" : "",
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#f0f2f8",
+      "v" : 2
+    },
+    "v" : 3
+  },
+  "targetDevice" : "browser",
+  "userList" : [ ],
+  "views" : {
+    "Start" : {
+      "bodyChildren" : [ {
+        "CSSClass" : "vantiqStaticText",
+        "actionMenuLabel" : null,
+        "actionMenuTopic" : null,
+        "borderColor" : "Default",
+        "borderRadius" : 4,
+        "borderWidth" : 0,
+        "fontFace" : "inherit",
+        "fontSize" : 20,
+        "fontStyle" : "normal",
+        "fontWeight" : "normal",
+        "h" : 25,
+        "heightPolicy" : 0,
+        "horzGravity" : 4,
+        "isDraggable" : true,
+        "isSelectable" : true,
+        "name" : "StaticText6",
+        "text" : "Device One",
+        "type" : "TextLabel",
+        "v" : 14,
+        "vertGravity" : 4,
+        "w" : 93,
+        "widthPolicy" : 0,
+        "x" : 311.6579556465149,
+        "y" : 59.32293701171875
+      }, {
+        "CSSClass" : "vantiqStaticText",
+        "actionMenuLabel" : null,
+        "actionMenuTopic" : null,
+        "borderColor" : "Default",
+        "borderRadius" : 4,
+        "borderWidth" : 0,
+        "fontFace" : "inherit",
+        "fontSize" : 20,
+        "fontStyle" : "normal",
+        "fontWeight" : "normal",
+        "h" : 25,
+        "heightPolicy" : 0,
+        "horzGravity" : 4,
+        "isDraggable" : true,
+        "isSelectable" : true,
+        "name" : "StaticText7",
+        "text" : "Device two",
+        "type" : "TextLabel",
+        "v" : 14,
+        "vertGravity" : 4,
+        "w" : 91,
+        "widthPolicy" : 0,
+        "x" : 495.659695148468,
+        "y" : 53.30731201171875
+      }, {
+        "CSSClass" : "vantiqNumberViewer",
+        "_units" : "",
+        "actionMenuLabel" : null,
+        "actionMenuTopic" : null,
+        "bgColor" : "#ff9800",
+        "borderColor" : "Default",
+        "borderRadius" : 4,
+        "borderWidth" : 1,
+        "dataStreamGroupedByFiltersString" : "",
+        "dataStreamPropertyList" : [ ],
+        "dataStreamUUID" : "b2c7e870-fc9a-4a4c-8023-4fedf5eb2947",
+        "dataType" : null,
+        "fgColor" : "#ffffff",
+        "h" : 80,
+        "heightPolicy" : 0,
+        "horzGravity" : 4,
+        "icon" : null,
+        "isDraggable" : true,
+        "isSelectable" : true,
+        "name" : "NumberViewer1",
+        "naturalKey" : null,
+        "naturalKeyValue" : null,
+        "operation" : "insert",
+        "propertyName" : "number",
+        "type" : "NumberWidget",
+        "v" : 14,
+        "vertGravity" : 4,
+        "w" : 82,
+        "widthPolicy" : 0,
+        "x" : 307.64754915237427,
+        "y" : 136.31076049804688
+      }, {
+        "CSSClass" : "vantiqNumberViewer",
+        "_units" : "",
+        "actionMenuLabel" : null,
+        "actionMenuTopic" : null,
+        "bgColor" : "#ff9800",
+        "borderColor" : "Default",
+        "borderRadius" : 4,
+        "borderWidth" : 1,
+        "dataStreamGroupedByFiltersString" : "",
+        "dataStreamPropertyList" : [ ],
+        "dataStreamUUID" : "99ba53c7-7439-4867-802f-8f011687a8f8",
+        "dataType" : null,
+        "fgColor" : "#ffffff",
+        "h" : 80,
+        "heightPolicy" : 0,
+        "horzGravity" : 4,
+        "icon" : null,
+        "isDraggable" : true,
+        "isSelectable" : true,
+        "name" : "NumberViewer2",
+        "naturalKey" : null,
+        "naturalKeyValue" : null,
+        "operation" : "insert",
+        "propertyName" : "number",
+        "type" : "NumberWidget",
+        "v" : 14,
+        "vertGravity" : 4,
+        "w" : 82,
+        "widthPolicy" : 0,
+        "x" : 494.6527371406555,
+        "y" : 136.3194580078125
+      }, {
+        "CSSClass" : "vantiqGauge",
+        "actionMenuLabel" : null,
+        "actionMenuTopic" : null,
+        "borderColor" : "Default",
+        "borderRadius" : 4,
+        "borderWidth" : 1,
+        "dataStreamGroupedByFiltersString" : "",
+        "dataStreamPropertyList" : [ ],
+        "dataStreamUUID" : "b2c7e870-fc9a-4a4c-8023-4fedf5eb2947",
+        "dataType" : null,
+        "greenZones" : "",
+        "h" : 165,
+        "heightPolicy" : 1,
+        "horzGravity" : 4,
+        "isDraggable" : true,
+        "isSelectable" : true,
+        "maximum" : 100,
+        "minimum" : 0,
+        "name" : "Gauge1",
+        "naturalKey" : null,
+        "naturalKeyValue" : null,
+        "operation" : "insert",
+        "propertyName" : "number",
+        "redZones" : "90:100",
+        "type" : "GaugeWidget",
+        "v" : 14,
+        "vertGravity" : 4,
+        "w" : 137,
+        "widthPolicy" : 1,
+        "x" : 277.6562466621399,
+        "y" : 235.32119750976562,
+        "yellowZones" : "70:90"
+      }, {
+        "CSSClass" : "vantiqGauge",
+        "actionMenuLabel" : null,
+        "actionMenuTopic" : null,
+        "borderColor" : "Default",
+        "borderRadius" : 4,
+        "borderWidth" : 1,
+        "dataStreamGroupedByFiltersString" : "",
+        "dataStreamPropertyList" : [ ],
+        "dataStreamUUID" : "99ba53c7-7439-4867-802f-8f011687a8f8",
+        "dataType" : null,
+        "greenZones" : "",
+        "h" : 137,
+        "heightPolicy" : 1,
+        "horzGravity" : 4,
+        "isDraggable" : true,
+        "isSelectable" : true,
+        "maximum" : 100,
+        "minimum" : 0,
+        "name" : "Gauge6",
+        "naturalKey" : null,
+        "naturalKeyValue" : null,
+        "operation" : "insert",
+        "propertyName" : "number",
+        "redZones" : "90:100",
+        "type" : "GaugeWidget",
+        "v" : 14,
+        "vertGravity" : 4,
+        "w" : 130,
+        "widthPolicy" : 1,
+        "x" : 466.6579556465149,
+        "y" : 246.31076049804688,
+        "yellowZones" : "70:90"
+      } ],
+      "data" : {
+        "properties" : { }
+      },
+      "fields" : [ ],
+      "footerChildren" : [ ],
+      "layoutType" : "browser",
+      "responseTopic" : "/my/response/topic"
+    }
+  }
+}
